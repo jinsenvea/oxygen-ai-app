@@ -1,0 +1,240 @@
+/* ===== 氧阁AI孕产APP - 全局样式 ===== */
+/* 色彩体系 */
+:root {
+  --primary: #F8A8B8;
+  --primary-dark: #E8889E;
+  --primary-light: #FFF0F3;
+  --secondary: #E0C3FC;
+  --secondary-dark: #C9A0E8;
+  --secondary-light: #F8E8FF;
+  --bg: #FFF8FA;
+  --card: #FFFFFF;
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --price: #FF6B81;
+  --success: #52C41A;
+  --warning: #FAAD14;
+  --error: #FF4D4F;
+  --border: #F0F0F0;
+
+  /* 渐变 */
+  --gradient-primary: linear-gradient(135deg, #F8A8B8, #E0C3FC);
+  --gradient-light: linear-gradient(135deg, #FFF0F3, #F8E8FF);
+  --gradient-btn: linear-gradient(135deg, #F8A8B8, #E8889E);
+
+  /* 圆角 */
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --radius-xs: 8px;
+
+  /* 阴影 */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10);
+  --shadow-pink: 0 4px 16px rgba(248,168,184,0.25);
+
+  /* 字体 */
+  --font-xs: 10px;
+  --font-sm: 12px;
+  --font-base: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 22px;
+
+  /* 毛玻璃 */
+  --glass: rgba(255,255,255,0.75);
+  --glass-heavy: rgba(255,255,255,0.92);
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-primary);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* 通用按钮样式 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 20px;
+  background: var(--gradient-btn);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: var(--shadow-pink);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
+
+.btn-primary.small {
+  height: 28px;
+  padding: 0 12px;
+  font-size: 12px;
+  border-radius: var(--radius-sm);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 20px;
+  background: transparent;
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1.5px solid var(--primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:active {
+  transform: scale(0.95);
+  background: var(--primary-light);
+}
+
+/* 毛玻璃卡片 */
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* 页面容器 */
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 110px;
+}
+
+/* 页面淡入动画 */
+.fade-in {
+  animation: fadeIn 0.35s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 弹性布局工具 */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 价格文字 */
+.price {
+  color: var(--price);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.price-small {
+  font-size: 12px;
+  color: var(--price);
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 10px;
+  border-radius: var(--radius-xs);
+  font-weight: 500;
+}
+
+.tag-success {
+  background: #F0FFF0;
+  color: var(--success);
+}
+
+.tag-warning {
+  background: #FFF8F0;
+  color: var(--warning);
+}
+
+/* 标题栏样式 */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.section-more {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  cursor: pointer;
+}
+
+.section-more:active {
+  color: var(--primary);
+}
+
+/* Vant 主题覆盖样式 */
+:root {
+  --van-primary-color: var(--primary);
+  --van-tabbar-height: 98px;
+  --van-tabbar-item-font-size: 12px;
+  --van-tabbar-background: rgba(255,255,255,0.92);
+  --van-button-primary-background: var(--gradient-btn);
+  --van-button-primary-border-color: var(--primary);
+  --van-button-round-border-radius: var(--radius-md);
+  --van-cell-vertical-padding: 14px;
+  --van-cell-horizontal-padding: 16px;
+  --van-cell-font-size: 14px;
+  --van-nav-bar-title-font-size: 16px;
+  --van-nav-bar-icon-color: var(--text-primary);
+}
