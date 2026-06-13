@@ -1,0 +1,14 @@
+import{_ as B,o as g,c as o,a as t,t as e,F as y,r as x,e as C,b as k,u as b,s as n,k as i,f as l,g as w,i as c}from"./index-DtvUdD_i.js";const T={class:"detail-page"},D={class:"dp-body"},F={class:"diary-hero"},A={class:"diary-mood"},N={class:"diary-meta"},I={class:"diary-stage"},S={class:"diary-date"},V={class:"diary-content"},E={key:0,class:"diary-images"},L={class:"action-row"},M={__name:"DiaryDetail",setup(P){w();const a=l({mood:"🥰",date:"2026-06-08",text:"今天第一次感觉到胎动！像小鱼吐泡泡一样轻轻的～爸爸把手放在肚皮上也感受到了，两个人都哭了😭",images:["👶"]}),u=l("孕中期"),v=l("24周+3天");g(()=>{});function d(){window.history.back()}function m(){i({title:"✏️ 编辑日记",message:`当前记录：
+`+a.value.text+`
+
+你可以修改内容或添加照片`,confirmButtonText:"去编辑",cancelButtonText:"取消",showCancelButton:!0,confirmButtonColor:"#F8A8B8"}).then(()=>n("✏️ 编辑功能即将上线")).catch(()=>{})}function p(){i({title:"🗑️ 删除日记",message:"确定删除这条日记吗？删除后不可恢复哦 💕",confirmButtonText:"删除",cancelButtonText:"保留",showCancelButton:!0,confirmButtonColor:"#FF4D4F"}).then(()=>{n("日记已删除"),setTimeout(()=>d(),1e3)}).catch(()=>{})}function f(){i({title:"🤖 氧宝AI润色",message:`✨ 润色前：
+「`+a.value.text+`」
+
+✨ 润色后：
+「今天第一次感受到宝宝在肚子里轻轻游动，像小鱼吐泡泡一样～爸爸把手放在肚皮上的那一刻，他也感受到了！我们两个人都激动得哭了。生命的奇迹，每天都在上演 💕」
+
+是否替换为润色后的版本？`,confirmButtonText:"替换",cancelButtonText:"不需要",showCancelButton:!0,confirmButtonColor:"#F8A8B8"}).then(()=>{a.value.text="今天第一次感受到宝宝在肚子里轻轻游动，像小鱼吐泡泡一样～爸爸把手放在肚皮上的那一刻，他也感受到了！我们两个人都激动得哭了。生命的奇迹，每天都在上演 💕",n("✨ 润色完成！文字更温暖了～")}).catch(()=>{})}function _(){i({title:"📤 分享日记",message:`将这份美好分享给家人朋友 💕
+
+1️⃣ 分享到朋友圈
+2️⃣ 分享给家人群
+3️⃣ 保存为精美卡片`,confirmButtonText:"分享到朋友圈",cancelButtonText:"取消",showCancelButton:!0,confirmButtonColor:"#F8A8B8"}).then(()=>n("✅ 已生成分享图片")).catch(()=>{})}return(R,s)=>(c(),o("div",T,[t("div",{class:"dp-header"},[t("button",{class:"dp-back",onClick:d},"‹ 返回"),s[1]||(s[1]=t("span",{class:"dp-title"},"📝 孕育日记",-1)),t("div",{class:"dp-actions"},[t("button",{class:"dp-action",onClick:m},"✏️"),t("button",{class:"dp-action",onClick:p},"🗑️")])]),t("div",D,[t("div",F,[t("span",A,e(a.value.mood),1),t("div",N,[t("span",I,e(u.value)+" · 第"+e(v.value)+"天",1),t("span",S,e(a.value.date),1)])]),t("div",V,e(a.value.text),1),a.value.images&&a.value.images.length?(c(),o("div",E,[(c(!0),o(y,null,x(a.value.images,(r,h)=>(c(),o("div",{key:h,class:"diary-img"},e(r),1))),128))])):C("",!0),s[3]||(s[3]=t("div",{class:"diary-privacy"},"🔒 仅自己可见 · 氧宝严格保护你的隐私",-1)),t("div",{class:"ai-suggestion",onClick:f},[...s[2]||(s[2]=[k('<span class="ai-icon" data-v-e29f4cd9>🤖</span><div class="ai-info" data-v-e29f4cd9><span class="ai-title" data-v-e29f4cd9>氧宝AI润色建议</span><span class="ai-text" data-v-e29f4cd9>让文字更温暖感人，一键润色 ✨</span></div><span class="ai-arrow" data-v-e29f4cd9>›</span>',3)])]),t("div",L,[t("button",{class:"action-btn share",onClick:_},"📤 分享"),t("button",{class:"action-btn export",onClick:s[0]||(s[0]=r=>b(n)("📥 已保存到本地"))},"💾 保存")])])]))}},j=B(M,[["__scopeId","data-v-e29f4cd9"]]);export{j as default};
